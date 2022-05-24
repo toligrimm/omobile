@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:omobile/supplier_all_orders_item_model.dart';
 import 'package:omobile/supplier_all_orders_list_item.dart';
-import 'package:omobile/supplier_drawer.dart';
+
 
 
 class SupplierAllOrders extends StatefulWidget {
