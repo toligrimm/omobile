@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:omobile/supplier_drawer.dart';
-import 'package:omobile/supplier_order_list_model.dart';
-import 'package:omobile/supplier_orders_list_item.dart';
+import 'package:omobile/supplier_new_order_list_model.dart';
+import 'package:omobile/supplier_new_orders_list_item.dart';
 
 class SupplierNewOrders extends StatefulWidget {
   const SupplierNewOrders({Key? key}) : super(key: key);
@@ -11,24 +11,17 @@ class SupplierNewOrders extends StatefulWidget {
 }
 
 class _SupplierNewOrdersState extends State<SupplierNewOrders> {
-  @override
+
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
-          "Новые заказы",
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      drawer: const SupplierDrawer(),
       body: Padding(
         padding: const EdgeInsets.only(top: 16.0),
         child: ListView.separated(
           itemCount: 20,
           itemBuilder: (context,index) {
             return SupplierOrderListItem(
-              supplierOrderListItemModel: SupplierOrderListItemModel(
+              supplierNewOrderListItemModel: SupplierNewOrderListItemModel(
                   "№ 123456",
                   "Бумага для офисной техники Svetocopy A4, 500 л.",
                   "На подтверждении у поставщика",

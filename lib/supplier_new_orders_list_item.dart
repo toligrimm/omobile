@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:omobile/supplier_order_list_model.dart';
+import 'package:omobile/supplier_new_order_list_model.dart';
 import 'package:omobile/text_styles.dart';
 
 
 class SupplierOrderListItem extends StatelessWidget {
-  const SupplierOrderListItem({Key? key, required this.supplierOrderListItemModel})
+  const SupplierOrderListItem({Key? key, required this.supplierNewOrderListItemModel})
       : super(key: key);
 
-  final SupplierOrderListItemModel supplierOrderListItemModel;
+  final SupplierNewOrderListItemModel supplierNewOrderListItemModel;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,10 @@ class SupplierOrderListItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   BodySmallGrey(
-                    value: supplierOrderListItemModel.id,
+                    value: supplierNewOrderListItemModel.id,
                   ),
                   BodySmallGrey(
-                    value: supplierOrderListItemModel.time,
+                    value: supplierNewOrderListItemModel.time,
                   ),
                 ],
               ),
@@ -41,22 +41,22 @@ class SupplierOrderListItem extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          supplierOrderListItemModel.name,
+                          supplierNewOrderListItemModel.name,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                               color: Colors.black, fontWeight: FontWeight.w400, fontSize: 18),
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          supplierOrderListItemModel.status,
+                          supplierNewOrderListItemModel.status,
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.orange,
+                            color: Colors.blue,
                           ),
                         ),
                         const SizedBox(height: 12.0),
                         Text(
-                          supplierOrderListItemModel.priceWithNds,
+                          supplierNewOrderListItemModel.priceWithNds,
                           style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
